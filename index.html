@@ -4,54 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TecnoGirona - Soluciones Tecnológicas Integrales</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
     <style>
-        /* --- GLOBAL RESET & BOX-SIZING --- */
-        * {
-            box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho/alto total */
-        }
-
-        /* Bloquea el desplazamiento horizontal en todo el documento */
-        html, body {
-            overflow-x: hidden; /* ¡Esto es la clave para evitar el scroll lateral! */
-            width: 100%; /* Asegura que no crezcan más allá del viewport */
-        }
-
-        /* --- VARIABLES CSS --- */
         :root {
-            --color-primario: #FFBF00; /* Naranja/Amarillo corporativo - vibrante y energico */
-            --color-primario-rgb: 255, 191, 0;
-            --color-secundario: #E6AC00; /* Tono más oscuro para hover y acentos */
-            --color-fondo-oscuro: #121212; /* Fondo principal muy oscuro */
-            --color-fondo-claro: #1E1E1E; /* Fondo para secciones/tarjetas ligeramente más claro */
-            --color-texto-claro: #F0F0F0; /* Blanco roto para el texto principal */
-            --color-texto-oscuro: #000000; /* Negro para texto sobre elementos claros */
-            --color-borde: #333333; /* Color de borde sutil */
-            --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.2);
-            --sombra-media: 0 8px 16px rgba(0, 0, 0, 0.4);
-            --sombra-fuerte: 0 12px 25px rgba(0,0,0,0.6);
-
-            /* Fuentes */
-            --font-headings: 'Montserrat', sans-serif;
-            --font-body: 'Open Sans', sans-serif;
-            --font-logo: 'Lexend', sans-serif; /* ¡NUEVA FUENTE PARA EL LOGO! */
+            --color-primario: #FFBF00; /* Naranja/Amarillo corporativo MÁS CLARO (Ámbar) */
+            --color-primario-rgb: 255, 191, 0; /* Versión RGB para usos con transparencia (rgba) */
+            --color-secundario: #E6AC00; /* Tono más oscuro para hover */
+            --color-fondo: #121212; /* Negro/Gris oscuro */
+            --color-texto: #F0F0F0; /* Blanco roto */
+            --color-cabecera-fondo: #000000;
+            --color-tarjeta-fondo: #1E1E1E; /* Base para las tarjetas */
+            --color-borde: #333333;
         }
 
-        /* --- ESTILOS GENERALES --- */
         body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: var(--font-body);
-            background-color: var(--color-fondo-oscuro);
-            color: var(--color-texto-claro);
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
             line-height: 1.6;
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23121212%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2225%22%20r%3D%221%22%20fill%3D%22%23FFBF00%20%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2275%22%20cy%3D%2225%22%20r%3D%221%22%20fill%3D%22%23FFBF00%20%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2275%22%20r%3D%221%22%20fill%3D%22%23FFBF00%20%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2275%22%20cy%3D%2275%22%20r%3D%221%22%20fill%3D%22%23FFBF00%20%22%20opacity%3D%220.3%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2225%22%20x2%3D%2275%22%20y2%3D%2225%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2275%22%20x2%3D%2275%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2225%22%20x2%3D%2225%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2275%22%20y1%3D%2225%22%20x2%3D%2275%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3C%2Fsvg%3E");
-            background-size: 100px 100px;
-            background-repeat: repeat;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23121212%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2225%22%20r%3D%221%22%20fill%3D%22%23FFBF00%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2275%22%20cy%3D%2225%22%20r%3D%221%22%20fill%3D%22%23FFBF00%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2275%22%20r%3D%221%22%20fill%3D%22%23FFBF00%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2275%22%20cy%3D%2275%22%20r%3D%221%22%20fill%3D%22%23FFBF00%22%20opacity%3D%220.3%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2225%22%20x2%3D%2275%22%20y2%3D%2225%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2275%22%20x2%3D%2275%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2225%22%20x2%3D%2225%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2275%22%20y1%3D%2225%22%20x2%3D%2275%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3C%2Fsvg%3E");
+            background-size: 100px 100px; /* Tamaño del patrón repetido */
+            background-repeat: repeat; /* Repite el patrón por toda la página */
             background-attachment: fixed;
         }
 
@@ -61,137 +35,79 @@
             margin: 0 auto;
         }
 
-        /* SECCIÓN BASE - MEJORA DE LA DIVISIÓN */
-        section {
-            padding: 80px 0; /* Mayor padding para más espacio */
-            position: relative;
-            background-color: var(--color-fondo-claro); /* Fondo claro para la mayoría de secciones */
-            box-shadow: var(--sombra-fuerte); /* Sombra para que las secciones floten */
-            margin: 40px auto; /* Márgenes para separar las secciones */
-            border-radius: 12px; /* Bordes redondeados para las secciones */
-            width: 90%; /* Asegura que la sección use el ancho del contenedor */
-            max-width: 1200px; /* Consistente con el contenedor principal */
-        }
-
-        /* AJUSTES ESPECÍFICOS PARA SECCIONES */
-        #hero {
-            margin-top: 0; /* Hero no tiene margen superior */
-            border-radius: 0 0 12px 12px; /* Solo bordes inferiores redondeados para el hero */
-            box-shadow: var(--sombra-fuerte); /* Sombra también para el hero */
-        }
-        #testimonials {
-            background-color: var(--color-fondo-oscuro); /* Fondo más oscuro para la sección de testimonios para contraste */
-        }
-        #contact {
-            /* ya tiene sus estilos de padding y max-width en su propia regla */
-            margin-bottom: 40px; /* Asegurar margen inferior para el contacto */
-        }
-        footer {
-            margin-top: 0; /* Footer no tiene margen superior si se trata como una sección */
-            border-radius: 12px 12px 0 0; /* Solo bordes superiores redondeados para el footer */
-        }
-
-        h1, h2, h3 {
-            font-family: var(--font-headings);
-            font-weight: 700; /* Negrita para títulos */
-            color: var(--color-texto-claro);
-        }
-
-        h2.section-title {
-            text-align: center;
-            font-size: 2.8em; /* Tamaño más grande para títulos de sección */
-            color: var(--color-texto-claro);
-            margin-bottom: 50px; /* Más espacio */
-            position: relative;
-            letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-
-        h2.section-title::after {
-            content: '';
-            display: block;
-            width: 80px; /* Línea más ancha */
-            height: 4px; /* Línea más gruesa */
-            background-color: var(--color-primario);
-            margin: 15px auto 0; /* Más espacio */
-            border-radius: 2px;
-        }
-
-        /* --- BOTONES --- */
-        .btn-primario {
-            display: inline-block;
-            background-color: var(--color-primario);
-            color: var(--color-texto-oscuro);
-            padding: 15px 40px; /* Más padding */
-            text-decoration: none;
-            font-weight: 600; /* Seminegrita */
-            border-radius: 8px; /* Bordes más redondeados */
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1em;
-            text-transform: uppercase; /* Mayúsculas */
-            letter-spacing: 0.5px;
-            box-shadow: var(--sombra-media);
-        }
-
-        .btn-primario:hover {
-            background-color: var(--color-secundario);
-            transform: translateY(-3px); /* Mayor levantamiento */
-            box-shadow: var(--sombra-fuerte);
-        }
-
-        /* --- HEADER --- */
         header {
-            background-color: var(--color-fondo-oscuro);
+            background-color: var(--color-cabecera-fondo);
             padding: 20px 0;
             border-bottom: 3px solid var(--color-primario);
-            display: flex;
-            justify-content: center; /* Centrar el logo ahora que no hay elementos a los lados */
-            align-items: center;
-            position: sticky; /* Sticky header */
-            top: 0;
-            z-index: 1000; /* Asegura que esté por encima de otros elementos */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Sombra para efecto 3D */
+            display: flex; /* Usamos flexbox para alinear elementos */
+            justify-content: space-between; /* Espacio entre logo/texto y contacto */
+            align-items: center; /* Centrar verticalmente */
         }
 
         header .logo-text {
             margin: 0;
-            font-size: 2.8em; /* Logo más grande */
-            font-family: var(--font-logo); /* ¡APLICACIÓN DE LA NUEVA FUENTE VARIABLE! */
-            color: var(--color-texto-claro);
-            display: flex;
+            font-size: 2.5em;
+            color: var(--color-texto);
+            text-align: left; /* Asegura que el texto esté a la izquierda */
+            display: flex; /* Para alinear el SVG y el texto */
             align-items: center;
-            font-weight: 700;
-            /* Ajustes para los ejes de la fuente variable (Peso y Ancho) */
-            font-variation-settings: 'wght' 800, 'wdth' 80; /* Peso 800 (extrabold), Ancho 80 (condensado) */
         }
 
+        /* ESTILOS PARA EL NUEVO LOGO SVG */
         header .logo-text svg {
-            height: 1.3em; /* Ajuste para el nuevo logo, ligeramente más grande */
-            width: 1.3em;
-            margin-right: 12px;
-            vertical-align: middle;
-            transition: transform 0.3s ease; /* Pequeña animación */
-        }
-
-        header .logo-text:hover svg {
-            transform: rotate(10deg); /* Animación al pasar el ratón */
+            height: 1.2em; /* Relativo al tamaño de la fuente del h1 */
+            width: 1.2em; /* Para mantener la proporción 1:1 del viewBox 48x48 */
+            /* No se aplica 'fill' aquí para respetar los colores internos del SVG */
+            margin-right: 10px; /* Espacio entre el icono y el texto */
+            vertical-align: middle; /* Alineación vertical */
         }
 
         header .logo-text span {
             color: var(--color-primario);
         }
 
+        header .contact-info {
+            display: flex; /* Para alinear los enlaces de contacto */
+            align-items: center;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            justify-content: flex-end; /* Alinea los elementos a la derecha */
+        }
+
+        header .contact-info a {
+            color: var(--color-texto);
+            text-decoration: none;
+            margin-left: 25px; /* Espacio entre los elementos de contacto */
+            display: flex;
+            align-items: center;
+            white-space: nowrap; /* Evita que el texto del número/email se rompa */
+        }
+
+        header .contact-info a:hover {
+            color: var(--color-primario);
+        }
+
+        header .contact-info a svg {
+            height: 24px; /* Tamaño del icono SVG */
+            width: 24px;
+            margin-right: 8px; /* Espacio entre el icono y el texto */
+            fill: currentColor; /* El icono heredará el color del texto del enlace */
+            transition: fill 0.3s ease;
+        }
+
+        header .contact-info a:hover svg {
+            fill: var(--color-primario); /* Cambia el color del icono al hacer hover */
+        }
+
         /* --- SECCIÓN HERO --- */
         .hero {
-            background: radial-gradient(circle at center, rgba(var(--color-primario-rgb), 0.25) 0%, var(--color-fondo-oscuro) 70%); /* Gradiente más vibrante */
+            background: radial-gradient(circle at center, rgba(var(--color-primario-rgb), 0.15) 0%, rgba(18, 18, 18, 0.8) 70%, var(--color-fondo) 100%);
             background-size: 200% 200%;
             animation: heroBackgroundPulse 15s infinite alternate ease-in-out;
-            color: var(--color-texto-claro);
-            padding: 100px 20px; /* Mayor padding */
+            color: #FFFFFF;
+            padding: 80px 20px;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         @keyframes heroBackgroundPulse {
@@ -200,29 +116,27 @@
         }
 
         .hero h2 {
-            font-size: 4em; /* Título más grande y con impacto */
-            margin-bottom: 30px;
+            font-size: 3.5em;
+            margin-bottom: 25px;
             color: var(--color-primario);
             letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(var(--color-primario-rgb), 0.7), 0 0 40px rgba(var(--color-primario-rgb), 0.5);
+            text-shadow: 0 0 15px rgba(var(--color-primario-rgb), 0.5), 0 0 30px rgba(var(--color-primario-rgb), 0.3);
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInSlideUp 1s ease-out forwards;
             animation-delay: 0.2s;
-            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.4em; /* Texto más grande y legible */
-            margin-bottom: 50px;
-            max-width: 900px;
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInSlideUp 1s ease-out forwards;
             animation-delay: 0.5s;
-            font-weight: 300; /* Más ligero para el párrafo */
         }
 
         .hero .btn-primario {
@@ -230,8 +144,8 @@
             transform: translateY(20px);
             animation: fadeInSlideUp 1s ease-out forwards;
             animation-delay: 0.8s;
-            padding: 18px 45px; /* Botón más grande */
-            font-size: 1.2em;
+            padding: 15px 35px;
+            font-size: 1.1em;
         }
 
         @keyframes fadeInSlideUp {
@@ -241,217 +155,169 @@
             }
         }
 
-        /* --- TARJETAS FLIP (SERVICIOS Y VENTAJAS) --- */
-        .services-grid, .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Tarjetas ligeramente más grandes y consistentes */
-            gap: 40px; /* Mayor espacio entre tarjetas */
+        .btn-primario {
+            display: inline-block;
+            background-color: var(--color-primario);
+            color: var(--color-cabecera-fondo);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
         }
 
-        .service-card, .advantage-item { /* Estilos base para el contenedor flip */
-            background-color: transparent;
-            border-radius: 12px;
-            box-shadow: none;
-            perspective: 1000px;
-            height: 280px; /* Altura un poco mayor */
-            cursor: pointer;
+        .btn-primario:hover {
+            background-color: var(--color-secundario);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(30, 30, 30, 0.85); /* Permite ver el patrón del body */
+            box-shadow: inset 0 5px 10px rgba(0,0,0,0.1), inset 0 -5px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- SECCIÓN DE SERVICIOS - FONDO ESTÁTICO --- */
+        section#services {
+            background-color: var(--color-fondo); /* Fondo estático */
+            box-shadow: inset 0 5px 10px rgba(0,0,0,0.1), inset 0 -5px 10px rgba(0,0,0,0.1); /* Mantener la sombra si se desea */
+        }
+
+        section h2.section-title {
+            text-align: center;
+            font-size: 2.2em;
+            color: var(--color-texto);
+            margin-bottom: 40px;
             position: relative;
         }
 
-        .service-card-inner, .advantage-item-inner { /* Estilos para el elemento que rota */
+        section h2.section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-primario);
+            margin: 10px auto 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- ESTILOS PARA TARJETAS CON EFECTO FLIP --- */
+        .service-card {
+            background-color: transparent; /* El fondo lo manejarán los lados interno */
+            padding: 0; /* No padding directo en la tarjeta, sino en los lados */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            perspective: 1000px; /* Necesario para el efecto 3D */
+            height: 250px; /* Altura fija para que el flip funcione bien */
+            cursor: pointer;
+            position: relative; /* Necesario para la sombra de hover */
+        }
+
+        .service-card-inner {
             position: relative;
             width: 100%;
             height: 100%;
             text-align: center;
-            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Curva de animación más suave */
-            transform-style: preserve-3d;
-            border-radius: 12px;
-            box-sizing: border-box;
-            box-shadow: var(--sombra-suave); /* Sombra inicial en el inner */
+            transition: transform 0.8s; /* Velocidad del giro */
+            transform-style: preserve-3d; /* Permite el 3D en los hijos */
+            border-radius: 8px; /* Aplicar al inner también */
+            box-sizing: border-box; /* Para que el padding no afecte el tamaño total */
         }
 
-        .service-card:hover .service-card-inner,
-        .advantage-item:hover .advantage-item-inner {
-            transform: rotateY(180deg) translateY(-5px); /* Rotación y levantamiento combinados */
-            box-shadow: var(--sombra-fuerte); /* Sombra más pronunciada al hover */
+        .service-card:hover .service-card-inner {
+            transform: rotateY(180deg);
         }
 
-        .service-card-front, .service-card-back,
-        .advantage-item-front, .advantage-item-back { /* Estilos para las caras frontal y trasera */
+        .service-card-front, .service-card-back {
             position: absolute;
             width: 100%;
             height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            padding: 30px; /* Más padding interno */
+            -webkit-backface-visibility: hidden; /* Oculta la parte trasera mientras no está visible */
+            backface-visibility: hidden; /* Estándar */
+            border-radius: 8px;
+            padding: 25px; /* Padding movido a los lados */
             box-sizing: border-box;
-            display: flex;
+            display: flex; /* Para centrar el contenido */
             flex-direction: column;
             justify-content: center;
             align-items: center;
             border: 1px solid var(--color-borde);
-            background-color: var(--color-fondo-claro); /* Fondo claro para las tarjetas */
-            transition: background-color 0.3s ease;
         }
 
-        .service-card-front, .advantage-item-front {
-            color: var(--color-texto-claro);
+        .service-card-front {
+            background-color: rgba(30, 30, 30, 0.8);
+            color: var(--color-texto);
         }
 
-        .service-card-back, .advantage-item-back {
-            background-color: rgba(var(--color-primario-rgb), 0.1); /* Fondo trasero con un toque del color principal */
-            color: var(--color-texto-claro);
-            transform: rotateY(180deg);
-            border: 1px solid var(--color-primario); /* Borde con color principal */
-        }
-
-        /* Estilos específicos para texto en la parte trasera */
-        .service-card-back h3, .advantage-item-back h3 {
-            color: var(--color-primario); /* Título trasero en color principal */
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .service-card-back p, .advantage-item-back p {
-            font-size: 1em;
-            line-height: 1.5;
-            color: var(--color-texto-claro);
-        }
-
-        /* Estilos para iconos en tarjetas */
-        .service-card .icon, .advantage-item .icon {
-            font-size: 3em; /* Iconos más grandes */
-            color: var(--color-primario);
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .service-card:hover .icon, .advantage-item:hover .icon {
-            color: var(--color-secundario); /* Cambia de color al hacer hover */
-        }
-
-        .service-card h3, .advantage-item h3 {
-            font-size: 1.5em;
-            color: var(--color-texto-claro);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .service-card p, .advantage-item p {
-            font-size: 1em;
-            color: var(--color-texto-claro);
-            line-height: 1.5;
-        }
-
-        /* --- SECCIÓN "POR QUÉ ELEGIRNOS" --- */
-        #why-choose-us {
-            background-color: var(--color-fondo-claro); /* Ya usa este */
-        }
-        /* advantage-grid y advantage-item ya se tratan arriba */
-
-        /* --- SECCIÓN TESTIMONIOS --- */
-        #testimonials {
-            background-color: var(--color-fondo-oscuro); /* Fondo más oscuro para contraste */
-            display: flex; /* Para centrar el carrusel y dots */
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .testimonial-carousel {
-            width: 100%; /* El carrusel ocupa todo el ancho disponible del contenedor */
-            overflow: hidden; /* Oculta los elementos fuera de la vista */
-            position: relative;
-            min-height: 280px; /* Altura mínima para evitar saltos de diseño */
-            max-width: calc(3 * 350px + 2 * 30px); /* Max-width para 3 cards + 2 gaps */
-        }
-
-        .testimonial-card-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
-        }
-
-        .testimonial-card {
-            flex: 0 0 350px; /* Ancho fijo para cada tarjeta de testimonio */
-            margin-right: 30px; /* Espacio entre tarjetas */
-            background-color: var(--color-fondo-claro);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: var(--sombra-media);
-            border: 1px solid var(--color-borde);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 250px; /* Ajuste para que las tarjetas de testimonio tengan altura suficiente */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .testimonial-card:last-child {
-            margin-right: 0; /* No margin al último para evitar scroll extra */
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--sombra-fuerte);
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1.05em;
-            line-height: 1.6;
-            color: var(--color-texto-claro);
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--color-primario);
-            font-size: 1.1em;
-        }
-        .testimonial-author span {
-            font-weight: 400;
-            color: var(--color-texto-claro);
-            font-size: 0.9em;
-        }
-
-        /* Puntos de navegación del carrusel */
-        .carousel-dots {
+        /* --- ESTILOS PARA LA PARTE TRASERA DE LA TARJETA (REVERSO) --- */
+        .service-card-back {
+            background-color: rgba(30, 30, 30, 0.95); /* Fondo oscuro similar al de la parte delantera */
+            color: var(--color-texto); /* Texto blanco */
+            transform: rotateY(180deg); /* Inicialmente girada para que no se vea */
+            padding: 25px;
+            font-size: 0.95em;
             text-align: center;
-            margin-top: 30px;
+        }
+
+        .service-card-back h3 {
+            color: var(--color-texto); /* Asegura el color del título en la parte trasera */
+            margin-bottom: 10px;
+        }
+
+        .service-card-back p {
+            color: var(--color-texto); /* Asegura el color del párrafo en la parte trasera */
+        }
+
+        /* Se mantiene el transform: translateY(-5px); del service-card:hover para un ligero levantamiento */
+        .service-card:hover {
+            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+            transform: translateY(-5px); /* Un leve levantamiento al hacer hover */
+            transition: transform 0.3s ease; /* Transición para el levantamiento */
+        }
+
+
+        .service-card .icon {
+            font-size: 2.5em;
+            color: var(--color-primario);
+            margin-bottom: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
         }
 
-        .dot {
-            display: inline-block;
-            width: 12px; /* Tamaño del punto */
-            height: 12px;
-            background-color: var(--color-borde); /* Color por defecto del punto */
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
-            border: 1px solid var(--color-primario); /* Borde sutil para los puntos */
+        .service-card .icon svg {
+            width: 1em;
+            height: 1em;
+            fill: var(--color-primario); /* Por defecto, los iconos de servicio serán del color principal */
         }
 
-        .dot.active {
-            background-color: var(--color-primario); /* Color del punto activo */
-            transform: scale(1.2); /* Tamaño ligeramente mayor para el punto activo */
-            border-color: var(--color-secundario); /* Borde diferente para el activo */
+        .service-card h3 {
+            font-size: 1.5em;
+            color: var(--color-texto);
+            margin-bottom: 10px;
         }
 
+        .service-card p {
+            font-size: 0.95em;
+            color: var(--color-texto);
+        }
 
-        /* --- SECCIÓN CONTACTO --- */
         #contact {
-            padding: 60px; /* Más padding */
-            border-radius: 12px; /* Más redondeado */
-            max-width: 800px; /* Más ancho */
-            margin: 40px auto; /* Más margen */
-            background-color: var(--color-fondo-claro); /* Fondo más claro */
-            box-shadow: var(--sombra-media); /* Sombra consistente */
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: rgba(30, 30, 30, 0.9);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
             border: 1px solid var(--color-borde);
             z-index: 1;
             position: relative;
@@ -459,20 +325,15 @@
 
         .contact-form {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Dos columnas para campos cortos */
-            gap: 25px; /* Mayor espacio */
-        }
-
-        .contact-form .full-width {
-            grid-column: 1 / -1; /* Ocupa todo el ancho en dos columnas */
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         .contact-form label {
             display: block;
-            margin-bottom: 8px; /* Más espacio */
-            font-weight: 600;
-            color: var(--color-texto-claro);
-            font-size: 1em; /* Ajustado de 1.05em a 1em */
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--color-texto);
         }
 
         .contact-form input[type="text"],
@@ -480,15 +341,13 @@
         .contact-form input[type="tel"],
         .contact-form textarea {
             width: 100%;
-            padding: 15px; /* Mayor padding */
+            padding: 12px;
             border: 1px solid var(--color-borde);
-            border-radius: 8px; /* Bordes redondeados */
-            background-color: var(--color-fondo-oscuro); /* Fondo de input más oscuro */
-            color: var(--color-texto-claro);
+            border-radius: 5px;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
             box-sizing: border-box;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            font-family: var(--font-body);
-            font-size: 1em;
         }
 
         .contact-form input[type="text"]:focus,
@@ -497,150 +356,74 @@
         .contact-form textarea:focus {
             outline: none;
             border-color: var(--color-primario);
-            box-shadow: 0 0 8px rgba(var(--color-primario-rgb), 0.6);
+            box-shadow: 0 0 5px var(--color-primario);
         }
 
         .contact-form textarea {
             resize: vertical;
-            min-height: 150px; /* Mayor altura mínima */
+            min-height: 120px;
         }
 
-        .contact-form .btn-primario {
-            width: auto; /* El botón ocupa su ancho natural */
-            justify-self: start; /* Alinea el botón a la izquierda */
-            grid-column: 1 / -1; /* Ocupa todo el ancho */
-            margin-top: 15px; /* Espacio superior */
-        }
-
-        /* --- FOOTER --- */
         footer {
             text-align: center;
-            padding: 30px 0; /* Más padding */
-            background-color: var(--color-fondo-oscuro);
+            padding: 20px 0;
+            background-color: var(--color-cabecera-fondo);
             border-top: 3px solid var(--color-primario);
-            margin-top: 60px; /* Más margen superior */
-            color: var(--color-texto-claro);
+            margin-top: 40px;
         }
 
         footer p {
-            margin: 8px 0;
-            font-size: 0.95em;
-            color: var(--color-texto-claro);
+            margin: 5px 0;
+            font-size: 0.9em;
         }
 
         footer a {
             color: var(--color-primario);
             text-decoration: none;
-            transition: color 0.3s ease;
         }
 
         footer a:hover {
-            color: var(--color-secundario);
             text-decoration: underline;
         }
 
-        /* --- MEDIA QUERIES (RESPONSIVE) --- */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 text-align: center;
-                padding: 15px 0;
-                justify-content: center; /* Asegurar centrado en móvil también */
             }
-            header .logo-text {
-                font-size: 2.2em;
+
+            header .contact-info {
+                margin-top: 15px;
                 justify-content: center;
-                margin-bottom: 0; /* Sin margen inferior si es el único elemento */
-                font-variation-settings: 'wght' 700, 'wdth' 90; /* Ajuste para móvil, menos condensado */
-            }
-            header .logo-text svg {
-                height: 1.1em;
-                width: 1.1em;
+                width: 100%;
             }
 
-            .hero {
-                padding: 70px 15px;
-            }
-            .hero h2 {
-                font-size: 3em;
-                line-height: 1.3;
-            }
-            .hero p {
-                font-size: 1.2em;
+            header .contact-info a {
+                margin: 0 10px;
             }
 
-            section {
-                padding: 60px 0;
-                margin: 30px auto; /* Menos margen en móvil */
-            }
-            h2.section-title {
-                font-size: 2.2em;
-                margin-bottom: 40px;
-            }
-
-            .services-grid, .advantages-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .service-card, .advantage-item { /* Aplicar estilos responsive a ambas */
-                height: auto; /* Altura auto para mejor adaptación en móvil */
-                min-height: 250px;
-                flex: 0 0 auto; /* Permite que el ancho se ajuste */
-                width: 90%; /* Ajuste de ancho para tarjetas */
-                margin: 0 auto;
-            }
-
-            .testimonial-carousel {
-                max-width: 90%; /* Ancho más restrictivo en móvil */
-                padding: 0 10px; /* Padding para evitar que las cards toquen los bordes */
-                box-sizing: border-box;
-            }
-
-            .testimonial-card {
-                flex: 0 0 100%; /* Cada tarjeta ocupa el 100% del ancho del carrusel en móvil */
-                margin-right: 0; /* Sin margen entre cards en móvil, el JS manejará la traslación */
-            }
-            .testimonial-card:not(:last-child) { /* Asegurarse que haya un pequeño espacio si se quiere */
-                margin-right: 20px; /* Un pequeño margen para que se vea el deslizamiento entre tarjetas */
-            }
-
-
-            #contact {
-                padding: 30px;
-                margin: 30px auto;
-            }
-            .contact-form {
-                grid-template-columns: 1fr; /* Una columna en móvil */
-                gap: 20px;
-            }
-            .contact-form .full-width {
-                grid-column: auto;
-            }
-        }
-        @media (max-width: 480px) {
             header .logo-text {
-                font-size: 1.8em;
+                font-size: 2em;
+                text-align: center;
+                width: 100%;
+                justify-content: center; /* Centra el logo y el texto en móvil */
             }
             .hero h2 {
-                font-size: 2.2em; /* Ajustado para móviles pequeños */
-                line-height: 1.2;
+                font-size: 2.5em;
+                letter-spacing: 1px;
             }
             .hero p {
-                font-size: 1em;
+                font-size: 1.1em;
             }
-            .btn-primario {
-                padding: 12px 30px;
-                font-size: 1em;
+            .hero {
+                padding: 60px 15px;
             }
-            .service-card h3, .advantage-item h3 {
-                font-size: 1.3em;
+            .services-grid {
+                grid-template-columns: 1fr;
             }
-            .service-card p, .advantage-item p {
-                font-size: 0.9em;
-            }
-            .testimonial-card {
-                min-height: 220px; /* Ligeramente más pequeña para móvil */
+            #contact {
+                padding: 20px;
+                margin: 20px auto;
             }
         }
     </style>
@@ -648,21 +431,35 @@
 <body>
 
     <header>
-        <div class="container" style="display: flex; justify-content: center; align-items: center;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <h1 class="logo-text">
                 <svg viewBox="-1 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Group_29" data-name="Group 29" transform="translate(-127 -339)"> <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(147 361)" fill="#FFBF00"></circle> <g id="Group_28" data-name="Group 28"> <path id="Path_33" data-name="Path 33" d="M151,354a11,11,0,1,0,11,11A11.013,11.013,0,0,0,151,354Zm0,20a9,9,0,1,1,9-9A9.01,9.01,0,0,1,151,374Z" fill="#ffffff"></path> <path id="Path_34" data-name="Path 34" d="M170,361h-2.484a16.81,16.81,0,0,0-2.026-4.833l1.774-1.773a3.005,3.005,0,0,0,0-4.244l-1.414-1.414a3,3,0,0,0-4.243,0l-1.773,1.774A16.809,16.809,0,0,0,155,348.484V346a3,3,0,0,0-3-3h-2a3,3,0,0,0-3,3v2.484A17.117,17.117,0,0,0,134.484,361H132a3,3,0,0,0-3,3v2a3,3,0,0,0,3,3h2.484a16.81,16.81,0,0,0,2.026,4.833l-1.774,1.773a3.005,3.005,0,0,0,0,4.244l1.414,1.414a3,3,0,0,0,4.243,0l1.773-1.774A16.809,16.809,0,0,0,147,381.516V384a3,3,0,0,0,3,3h2a3,3,0,0,0,3-3v-2.484a16.809,16.809,0,0,0,4.833-2.026l1.773,1.774a3,3,0,0,0,4.243,0l1.415-1.414a3.005,3.005,0,0,0,0-4.244l-1.773-1.773A16.81,16.81,0,0,0,167.516,369H170a3,3,0,0,0,3-3v-2A3,3,0,0,0,170,361Zm-6.979-10.85a1,1,0,0,1,1.414,0l1.414,1.414a1,1,0,0,1,0,1.415l-1.521,1.521a17.274,17.274,0,0,0-2.828-2.828Zm-24.042,29.7a1,1,0,0,1-1.414,0l-1.414-1.414a1,1,0,0,1,0-1.415l1.521-1.521a17.274,17.274,0,0,0,2.828,2.828Zm26.87-2.829a1,1,0,0,1,0,1.415l-1.414,1.414a1,1,0,0,1-1.414,0l-1.522-1.522a17.24,17.24,0,0,0,2.829-2.828ZM171,366a1,1,0,0,1-1,1h-4.119l-.154.813a15.08,15.08,0,0,1-11.914,11.914l-.813.154V384a1,1,0,0,1-1,1h-2a1,1,0,0,1-1-1v-4.119l-.813-.154a15.08,15.08,0,0,1-11.914-11.914l-.154-.813H132a1,1,0,0,1-1-1v-2a1,1,0,0,1,1-1h4.119l.154-.813a15.08,15.08,0,0,1,11.914-11.914l.813-.154V346a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1v4.119l.813.154a15.08,15.08,0,0,1,11.914,11.914l.154.813H170a1,1,0,0,1,1,1Z" fill="#ffffff"></path> <path id="Path_35" data-name="Path 35" d="M139,345a6,6,0,1,0-6,6A6.006,6.006,0,0,0,139,345Zm-10,0a4,4,0,1,1,4,4A4,0,0,1,129,345Z" fill="#ffffff"></path> <circle id="Ellipse_4" data-name="Ellipse 4" cx="2" cy="2" r="2" transform="translate(131 343)" fill="#ffffff"></circle> </g> </g> </g>
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Group_29" data-name="Group 29" transform="translate(-127 -339)"> <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(147 361)" fill="#FFBF00"></circle> <g id="Group_28" data-name="Group 28"> <path id="Path_33" data-name="Path 33" d="M151,354a11,11,0,1,0,11,11A11.013,11.013,0,0,0,151,354Zm0,20a9,9,0,1,1,9-9A9.01,9.01,0,0,1,151,374Z" fill="#ffffff"></path> <path id="Path_34" data-name="Path 34" d="M170,361h-2.484a16.81,16.81,0,0,0-2.026-4.833l1.774-1.773a3.005,3.005,0,0,0,0-4.244l-1.414-1.414a3,3,0,0,0-4.243,0l-1.773,1.774A16.809,16.809,0,0,0,155,348.484V346a3,3,0,0,0-3-3h-2a3,3,0,0,0-3,3v2.484A17.117,17.117,0,0,0,134.484,361H132a3,3,0,0,0-3,3v2a3,3,0,0,0,3,3h2.484a16.81,16.81,0,0,0,2.026,4.833l-1.774,1.773a3.005,3.005,0,0,0,0,4.244l1.414,1.414a3,3,0,0,0,4.243,0l1.773-1.774A16.809,16.809,0,0,0,147,381.516V384a3,3,0,0,0,3,3h2a3,3,0,0,0,3-3v-2.484a16.809,16.809,0,0,0,4.833-2.026l1.773,1.774a3,3,0,0,0,4.243,0l1.415-1.414a3.005,3.005,0,0,0,0-4.244l-1.773-1.773A16.81,16.81,0,0,0,167.516,369H170a3,3,0,0,0,3-3v-2A3,3,0,0,0,170,361Zm-6.979-10.85a1,1,0,0,1,1.414,0l1.414,1.414a1,1,0,0,1,0,1.415l-1.521,1.521a17.274,17.274,0,0,0-2.828-2.828Zm-24.042,29.7a1,1,0,0,1-1.414,0l-1.414-1.414a1,1,0,0,1,0-1.415l1.521-1.521a17.274,17.274,0,0,0,2.828,2.828Zm26.87-2.829a1,1,0,0,1,0,1.415l-1.414,1.414a1,1,0,0,1-1.414,0l-1.522-1.522a17.24,17.24,0,0,0,2.829-2.828ZM171,366a1,1,0,0,1-1,1h-4.119l-.154.813a15.08,15.08,0,0,1-11.914,11.914l-.813.154V384a1,1,0,0,1-1,1h-2a1,1,0,0,1-1-1v-4.119l-.813-.154a15.08,15.08,0,0,1-11.914-11.914l-.154-.813H132a1,1,0,0,1-1-1v-2a1,1,0,0,1,1-1h4.119l.154-.813a15.08,15.08,0,0,1,11.914-11.914l.813-.154V346a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1v4.119l.813.154a15.08,15.08,0,0,1,11.914,11.914l.154.813H170a1,1,0,0,1,1,1Z" fill="#ffffff"></path> <path id="Path_35" data-name="Path 35" d="M139,345a6,6,0,1,0-6,6A6.006,6.006,0,0,0,139,345Zm-10,0a4,4,0,1,1,4,4A4,4,0,0,1,129,345Z" fill="#ffffff"></path> <circle id="Ellipse_4" data-name="Ellipse 4" cx="2" cy="2" r="2" transform="translate(131 343)" fill="#ffffff"></circle> </g> </g> </g>
                 </svg>
                 Tecno<span>Girona</span>
             </h1>
+            <div class="contact-info">
+                <a href="https://wa.me/34637161141" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.04 2C7.03 2 3 6.03 3 11.04c0 1.94.61 3.75 1.66 5.24L3 21l5.24-1.66c1.49 1.05 3.3 1.66 5.24 1.66 5.01 0 9.04-4.03 9.04-9.04S17.05 2 12.04 2zm3.62 14.78c-.2.33-.8.32-1.12.16-.32-.16-1.85-.75-2.14-.85-.29-.11-.5-.16-.71.16-.21.32-.81.99-1.02 1.2-.21.21-.4.23-.74.07-.34-.16-1.39-.51-2.65-1.64-1.9-1.78-2.63-3.6-2.92-4.13-.29-.53-.03-.81.18-1.02.19-.19.45-.55.65-.82.2-.27.27-.47.18-.66-.09-.19-.8-1.92-1.1-2.62-.29-.69-.58-.59-.8-.59-.21 0-.45-.04-.68-.04-.24 0-.6.09-.92.42-.32.33-1.21 1.18-1.21 2.89s1.24 3.36 1.41 3.6c.17.24 2.45 3.75 5.92 5.25 3.47 1.5 3.99 1.25 4.7 1.18.7-.07 1.5-.63 1.71-.91.21-.28.21-.52.14-.66-.07-.15-.27-.24-.57-.39z"/>
+                    </svg>
+                    637-161-141
+                </a>
+                <a href="mailto:tecnogirona@gmail.com">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    tecnogirona@gmail.com
+                </a>
             </div>
+        </div>
     </header>
 
     <section id="hero" class="hero">
         <div class="container">
-            <h2>Tu Socio Tecnológico de Confianza</h2>
-            <p>Desde la reparación experta de tus dispositivos hasta el desarrollo web a medida, en TecnoGirona fusionamos la experiencia técnica con soluciones innovadoras. ¡Tu tecnología, en las mejores manos!</p>
-            <a href="#contact" class="btn-primario">Solicita un Presupuesto</a>
+            <h2>Tu Socio Tecnológico de Confianza en Girona</h2>
+            <p>Soluciones expertas en reparación de ordenadores, móviles, consolas, desarrollo web, recuperación de datos y mucho más. ¡Confía en TecnoGirona!</p>
+            <a href="#contact" class="btn-primario">Contacta Ahora</a>
         </div>
     </section>
 
@@ -684,7 +481,7 @@
                         </div>
                         <div class="service-card-back">
                             <h3>Reparación de Ordenadores</h3>
-                            <p>Desde la optimización del sistema hasta la sustitución de componentes críticos, nuestro equipo experto garantiza la máxima eficiencia y durabilidad. ¡Diagnóstico rápido y eficaz para tu PC o Mac!</p>
+                            <p>Desde la optimización del sistema hasta la sustitución de componentes, nuestro equipo experto garantiza la máxima eficiencia y durabilidad. ¡Diagnóstico rápido y eficaz para tu PC o Mac!</p>
                         </div>
                     </div>
                 </div>
@@ -715,11 +512,11 @@
                                     <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM9 16H6V8h3v8zm4 0h-3V8h3v8zm4 0h-3V8h3v8zm-7-5.5h-1v1h1v-1zm1 2h-1v1h1v-1zm1 0h1v1h-1v-1zm1-2h-1v1h1v-1zm1 0h1v1h-1v-1zm-1 2h-1v1h1v-1z"/>
                                 </svg>
                             </div>
-                            <h3>Reparación de Consolas</h3>
-                            <p>Servicio técnico especializado para PlayStation, Xbox, Nintendo y otros aparatos.</p>
+                            <h3>Reparación de Dispositivos Electrónicos</h3>
+                            <p>Servicio técnico para consolas (PS, Xbox, Nintendo) y otros aparatos.</p>
                         </div>
                         <div class="service-card-back">
-                            <h3>Reparación de Consolas</h3>
+                            <h3>Reparación de Dispositivos Electrónicos</h3>
                             <p>No solo ordenadores y móviles. También reparamos consolas de videojuegos (PlayStation, Xbox, Nintendo) y una amplia gama de otros dispositivos electrónicos. ¡Pregúntanos sin compromiso!</p>
                         </div>
                     </div>
@@ -733,11 +530,11 @@
                                     <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
                                 </svg>
                             </div>
-                            <h3>Desarrollo Web a Medida</h3>
+                            <h3>Desarrollo de Páginas Web</h3>
                             <p>Creamos sitios web modernos, responsivos y optimizados para tu negocio.</p>
                         </div>
                         <div class="service-card-back">
-                            <h3>Desarrollo Web a Medida</h3>
+                            <h3>Desarrollo de Páginas Web</h3>
                             <p>Desde webs corporativas hasta tiendas online. Diseñamos y desarrollamos soluciones web personalizadas que se adaptan a tus necesidades, garantizando una excelente experiencia de usuario y visibilidad en buscadores.</p>
                         </div>
                     </div>
@@ -766,7 +563,7 @@
                         <div class="service-card-front">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.76-1.71-1.06L14 2.1c-.06-.2-.25-.33-.47-.33H9.4c-.22 0-.41.13-.47.33L7.3 4.2c-.62.3-1.19.66-1.71 1.06l-2.49-1c-.22-.08-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24-.42-.12-.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52-.4 1.09.76 1.71 1.06l.3 2.1c-.06-.2-.25-.33-.47-.33h4.8c.22 0 .41-.13.47-.33l.3-2.1c.62-.3 1.19-.66 1.71-1.06l2.49 1c.22.08.49 0 .61-.22l2-3.46c.12-.22-.07.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                    <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.76-1.71-1.06L14 2.1c-.06-.2-.25-.33-.47-.33H9.4c-.22 0-.41.13-.47.33L7.3 4.2c-.62.3-1.19.66-1.71 1.06l-2.49-1c-.22-.08-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24-.42-.12-.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52-.4 1.09-.76 1.71 1.06l.3 2.1c.06.2.25.33.47.33h4.8c.22 0 .41-.13.47-.33l.3-2.1c.62-.3 1.19-.66 1.71-1.06l2.49 1c.22.08.49 0 .61-.22l2-3.46c.12-.22-.07.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
                                 </svg>
                             </div>
                             <h3>Ampliación y Equipos a la Carta</h3>
@@ -837,160 +634,12 @@
         </div>
     </section>
 
-    <section id="why-choose-us">
+    <section id="about">
         <div class="container">
-            <h2 class="section-title">¿Por Qué Elegir TecnoGirona?</h2>
-            <div class="advantages-grid">
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                </svg>
-                            </div>
-                            <h3>Expertos Certificados</h3>
-                            <p>Nuestro equipo está formado por técnicos titulados con años de experiencia en el sector.</p>
-                        </div>
-                        <div class="advantage-item-back">
-                            <h3>Expertos Certificados</h3>
-                            <p>Nuestro equipo de técnicos cuenta con certificaciones reconocidas y años de experiencia en el sector, garantizando un servicio de la más alta calidad y soluciones fiables.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2z"/>
-                                </svg>
-                            </div>
-                            <h3>Soluciones Integrales</h3>
-                            <p>Cubrimos todas tus necesidades tecnológicas: reparación, desarrollo, mantenimiento y asesoramiento.</p>
-                        </div>
-                        <div class="advantage-item-back">
-                            <h3>Soluciones Integrales</h3>
-                            <p>Desde reparaciones y desarrollo web hasta mantenimiento y asesoramiento, te ofrecemos un abanico completo de servicios tecnológicos para cubrir todas tus necesidades bajo un mismo techo.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                                </svg>
-                            </div>
-                            <h3>Atención Personalizada</h3>
-                            <p>Cada cliente es único. Ofrecemos un servicio adaptado a tus requisitos y presupuesto.</p>
-                        </div>
-                        <div class="advantage-item-back">
-                            <h3>Atención Personalizada</h3>
-                            <p>Sabemos que cada cliente es único. Escuchamos tus necesidades para ofrecerte soluciones a medida, con un trato cercano y adaptado a tus requisitos y presupuesto.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.71-12.29c-.39-.39-1.02-.39-1.41 0L9 10.59l-1.3-1.3c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41L8.29 13.7c.39.39 1.02.39 1.41 0L14.71 9.71c.39-.39.39-1.02 0-1.41z"/>
-                                </svg>
-                            </div>
-                            <h3>Garantía de Satisfacción</h3>
-                            <p>Trabajamos con los más altos estándares de calidad para tu total tranquilidad y confianza.</p>
-                        </div>
-                        <div class="advantage-item-back">
-                            <h3>Garantía de Satisfacción</h3>
-                            <p>Tu confianza es nuestra prioridad. Trabajamos con los más altos estándares de calidad y te ofrecemos garantía en todos nuestros servicios, asegurando tu total tranquilidad.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M13 1.01V6h5L11 23v-5H6l7-17z"/>
-                                </svg>
-                            </div>
-                            <h3>Soporte Técnico Rápido</h3>
-                            <p>Nos enorgullece ofrecer tiempos de respuesta ágiles y soluciones rápidas para que nunca te quedes desconectado.</p>
-                        </div>
-                        <div class="advantage-item-back">
-                            <h3>Soporte Técnico Rápido</h3>
-                            <p>Tu tiempo es oro. Por eso, garantizamos una respuesta inmediata y soluciones eficientes a tus problemas tecnológicos, minimizando cualquier interrupción en tu día a día.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <h3>Presencia Local</h3>
-                            <p>Estamos cerca de ti, ofreciendo un servicio de proximidad y confianza que solo un equipo local puede dar.</p>
-                        </div>
-                        <div class="advantage-item-back">
-                            <h3>Presencia Local</h3>
-                            <p>Como empresa arraigada en nuestra región, entendemos las necesidades de nuestra comunidad. Ofrecemos un servicio cercano, accesible y de confianza, siempre a tu disposición en la provincia.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-            <div class="testimonial-carousel">
-                <div class="testimonial-card-wrapper">
-                    <div class="testimonial-card">
-                        <p>"Mi portátil estaba muerto y TecnoGirona lo resucitó en tiempo récord. ¡Un servicio impecable y transparente! Los recomiendo al 100%."</p>
-                        <div class="testimonial-author">
-                            Juan P. <span>- Empresario local</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Necesitaba una web para mi negocio y el equipo de TecnoGirona superó mis expectativas. Profesionalidad y un diseño increíble."</p>
-                        <div class="testimonial-author">
-                            Maria F. <span>- Tienda online</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"La recuperación de mis datos fue crucial y lo lograron sin problemas. Un alivio saber que puedo confiar en ellos para cualquier problema tecnológico."</p>
-                        <div class="testimonial-author">
-                            Carlos G. <span>- Autónomo</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Siempre que tengo un problema con mi móvil, acudo a TecnoGirona. Rápidos, eficientes y con precios justos. ¡Son mis técnicos de cabecera!"</p>
-                        <div class="testimonial-author">
-                            Laura M. <span>- Cliente recurrente</span>
-                        </div>
-                    </div>
-                     <div class="testimonial-card">
-                        <p>"El asesoramiento para mi nueva oficina fue excelente. Me ayudaron a elegir el hardware y software perfecto sin gastar de más."</p>
-                        <div class="testimonial-author">
-                            Roberto D. <span>- Startup Tech</span>
-                        </div>
-                    </div>
-                     <div class="testimonial-card">
-                        <p>"Servicio de mantenimiento para mis consolas, ¡impecable! Ahora funcionan como el primer día. Totalmente recomendados para gamers."</p>
-                        <div class="testimonial-author">
-                            Ana L. <span>- Entusiasta de los videojuegos</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-dots"></div>
+            <h2 class="section-title">Sobre TecnoGirona</h2>
+            <p style="text-align:center; max-width: 800px; margin: 0 auto 20px auto;">
+                En **TecnoGirona**, somos un equipo de profesionales apasionados por la tecnología, comprometidos con ofrecer soluciones eficientes y de alta calidad. Con años de experiencia en el sector, nuestro objetivo es ser tu servicio técnico de referencia en Girona, brindando confianza, transparencia y resultados garantizados. Desde reparaciones complejas hasta el desarrollo de tu presencia online, estamos aquí para ayudarte.
+            </p>
         </div>
     </section>
 
@@ -998,7 +647,7 @@
         <div class="container">
             <h2 class="section-title">Contacta con Nosotros</h2>
             <p style="text-align:center; margin-bottom: 30px;">
-                ¿Tienes alguna pregunta o necesitas un presupuesto? Rellena el formulario y te responderemos a la brevedad. Tu consulta es importante para nosotros.
+                ¿Tienes alguna pregunta o necesitas un presupuesto? Rellena el formulario y te responderemos a la brevedad.
             </p>
             <form class="contact-form" action="mailto:tecnogirona@gmail.com" method="POST" enctype="text/plain">
                 <div>
@@ -1013,15 +662,15 @@
                     <label for="telefono">Teléfono (Opcional):</label>
                     <input type="tel" id="telefono" name="Telefono">
                 </div>
-                <div class="full-width">
+                <div>
                     <label for="asunto">Asunto:</label>
                     <input type="text" id="asunto" name="Asunto" required>
                 </div>
-                <div class="full-width">
+                <div>
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="Mensaje" rows="5" required></textarea>
                 </div>
-                <div class="full-width">
+                <div>
                     <button type="submit" class="btn-primario">Enviar Mensaje</button>
                 </div>
             </form>
@@ -1034,96 +683,9 @@
             <p>
                 Teléfono: <a href="tel:637161141">637-161-141</a> | Email: <a href="mailto:tecnogirona@gmail.com">tecnogirona@gmail.com</a>
             </p>
-            </div>
+            <p>Girona, Cataluña, España</p>
+        </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const carouselWrapper = document.querySelector('.testimonial-card-wrapper');
-            const testimonialCards = Array.from(document.querySelectorAll('.testimonial-card')); // Convert NodeList to Array
-            const dotsContainer = document.querySelector('.carousel-dots');
-            let currentIndex = 0; // Current page index
-            let cardsVisible = 3; // Default for desktop
-
-            // Function to determine cardsVisible based on screen width
-            const getCardsVisible = () => {
-                // If the screen is small (e.g., mobile), show 1 card per view
-                if (window.innerWidth <= 768) {
-                    return 1;
-                }
-                // For larger screens, show 3 cards per view
-                return 3;
-            };
-
-            const createDots = () => {
-                dotsContainer.innerHTML = ''; // Clear existing dots
-                cardsVisible = getCardsVisible(); // Update cardsVisible based on current screen size
-                const totalPages = Math.ceil(testimonialCards.length / cardsVisible);
-
-                // Ensure current index is within bounds of new totalPages
-                if (currentIndex >= totalPages) {
-                    currentIndex = totalPages > 0 ? totalPages - 1 : 0; // Adjust if resized smaller
-                }
-
-                for (let i = 0; i < totalPages; i++) {
-                    const dot = document.createElement('span');
-                    dot.classList.add('dot');
-                    dot.dataset.index = i;
-                    dotsContainer.appendChild(dot);
-                    dot.addEventListener('click', () => {
-                        currentIndex = i;
-                        updateCarousel();
-                    });
-                }
-            };
-
-            const updateCarousel = () => {
-                // Recalculate card dimensions on update to be responsive
-                const currentCard = testimonialCards[0];
-                if (!currentCard) { // Exit if no cards are present
-                    carouselWrapper.style.transform = `translateX(0px)`; // Reset transform if no cards
-                    return;
-                }
-
-                // Get actual width and margin of the first card (all are assumed same)
-                const cardWidth = currentCard.offsetWidth;
-                // Get the computed margin-right. parseFloat is important for numeric value
-                const gap = parseFloat(getComputedStyle(currentCard).marginRight || 0);
-                const cardFullWidth = cardWidth + gap;
-
-                // Calculate the translation offset
-                // This shifts the wrapper by `cardsVisible` full card widths for each page
-                let offset = -currentIndex * cardFullWidth * cardsVisible;
-
-                carouselWrapper.style.transform = `translateX(${offset}px)`;
-
-                // Update active dot
-                document.querySelectorAll('.dot').forEach((dot, index) => {
-                    if (index === currentIndex) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
-            };
-
-            // Initialize carousel and dots
-            createDots();
-            updateCarousel();
-
-            // Recalculate and update on window resize
-            window.addEventListener('resize', () => {
-                // Only recreate dots and update if cardsVisible actually changes
-                // or if there's a significant resize that affects card layout
-                const newCardsVisible = getCardsVisible();
-                if (newCardsVisible !== cardsVisible) {
-                    cardsVisible = newCardsVisible;
-                    createDots();
-                }
-                updateCarousel();
-            });
-        });
-    </script>
 
 </body>
 </html>
